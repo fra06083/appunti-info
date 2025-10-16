@@ -77,8 +77,7 @@ ho organizzato il mio sistema in sottosistemi, come li usiamo? Diagramma compone
 
 --- 
 COMPONENTE
-il componente contiene le interfacce, quindi è un contenitore e rappresentiamo le interfacce come chip e ci mettiamo
-il nome 
+il componente contiene le interfacce, quindi è un contenitore e rappresentiamo le interfacce come chip e ci mettiamo il nome 
 
 ![[image-10.png|499x258]]
 
