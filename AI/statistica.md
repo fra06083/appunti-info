@@ -25,14 +25,14 @@ La probabilità condizionata dell'evento A dato l'evento B è definita come la q
 #### Bayes' rule
 $$\large P(A|B) = \frac{P(A)\cdot P(B|A)}{P(B)}$$  
 - - -
-![[image.png]] (img. slide 78) marginalizzazione in senso di integrazione
+![[condivisione gas/BASI DATI/images/image-3.png]] (img. slide 78) marginalizzazione in senso di integrazione
 
 ---
 #### Distribuzione congiunta
 considerare tutte le possibili combinazioni di valori possibili
 per ognuna delle possibili combinazioni si vuole stabilire la probabilità
 
-gender, working hours, health; ognuna di queste è una variabile aleatoria ($\large X_1, X_2$ ecc)![[image-1.png|357x271]]
+gender, working hours, health; ognuna di queste è una variabile aleatoria ($\large X_1, X_2$ ecc)![[condivisione gas/BASI DATI/images/image-1.png|357x271]]
 
 1. si costruisce una tabella con le possibili combinazioni dei valori delle features
 2. stimare la probabilità per ogni combinazione di valori
@@ -47,7 +47,7 @@ skippata un pochetto di robina qua
 Si suppone che le variabili siano **indipendenti** fra di loro dato Y. Allora la probabilità si può riscrivere come: $$\large P(X_1, X_2, ..., X_n| Y) = \prod_i P(X_i|Y)$$calcolo una approssimazione della mia distribuzione disgiunta.
 Nel caso booleano serviva calcolare $\large 2^n -1$, con la distribuzione congiunta. Usando la naive Bayes si passa a calcolare $\large 2 \cdot n$ 
 (img. nive bayes riassunto)
-![[image-2.png|482x335]]
+![[condivisione gas/BASI DATI/images/image-2.png|482x335]]
 
 per quanto riguarda la classificazione. per quale valore $\large y_i$ di questa quantità corrisponde al valore massimo. In questo caso diventa più semplice dato che non c'è il denominatore
 - - -

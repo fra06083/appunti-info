@@ -10,6 +10,7 @@ cose in comune fra le varie comunicazioni?
 
 l'oggetto che verrà creato per gestire una comunicazione sarà dello stesso tipo di un oggetto aperto tramite una open (si parla quindi di file descriptor!)
 
+
 idea di sock-albero (indirizzo di albero) abbiamo qualsiasi tipo di indirizzo.
 
 

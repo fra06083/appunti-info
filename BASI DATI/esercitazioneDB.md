@@ -147,4 +147,32 @@ $\large \rho_{p2, E2 <-- pid, eid}$ (S)))
 
 on at least two aircraft, ovvero si intende, maggiore di uno
 uh, noccapito il join di employee aiut
+- - -
+esercizio 21
+SHOW(Code, Title, Company, Duration
+Playbill(Date, Time, Show, Theatre)
 
+nomi compagnie che hanno performance il 15/10/2003 ma non 16/10/2003
+soluzione francesco:
+(SHOW) e (Playbill),
+
+soluzione
+join su Show e Code,
+$\large \pi_{company}$((SHOW
+$\large \Join_{code = show}$ 
+$\large \sigma_{date = 15/10/2003}$(PLAYBILL))
+$\LARGE -$
+$\large \pi_{company}$((SHOW
+$\large \Join_{code = show}$ 
+$\large \sigma_{date = 16/10/2003}$(PLAYBILL))
+- in ordine esce join su show e playbill, Code (codice show) e show sono connessi: poi faccio un select da quello che mi esce in cui la data è 15/10 poi faccio la proiezione per selezionarmi solo le compagnie.
+- visto che mi chiede le date non 16/10 rimuovo le righe in cui compare 16/10 da quel risultato
+- - - 
+esercizio 22
+
+
+$\large \pi_{name, surname}$($\large \sigma_{budget>100 000}$(PROJECT
+$\Join_{project=number}$
+STAFF
+$\large \Join_{employee = code}$
+EMPLOYEE)

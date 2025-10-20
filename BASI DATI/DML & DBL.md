@@ -59,6 +59,7 @@ WHERE campo1=ciao AND campo2=2
 ```
 
 Un sotto insieme della relazione che soddisfano un determinato predicato 
+$\LARGE \sigma_{\text{preposizione logica}}$
 
 ---
 **Projection**
