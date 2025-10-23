@@ -1,4 +1,30 @@
 Guarderemo esempi di codifica, ci interessa come funziona e ci concentriamo su java nel discorso di late-binding e overriding
+## 1. Classi Annidate (Nested, Inner, Local)
+
+In Java, è possibile definire una classe all'interno di un'altra. Questo concetto è più profondo rispetto a C++ (dove è solo questione di visibilità).
+
+### Tipi di Classi Annidate in Java
+
+1.  **Nested Class (Classe Annidata Statica)**
+    * **Definizione:** È una classe definita con la keyword `static` dentro un'altra classe.
+    * **Scopo:** Usata per raggruppamento logico e packaging.
+    * **Regola Chiave:** **Non** è legata a un'istanza della classe esterna.
+    * **Accesso:** Può accedere **solo** ai membri `static` della classe esterna.
+
+2.  **Inner Class (Classe Interna)**
+    * **Definizione:** È una classe non-`static` definita dentro un'altra (è il default).
+    * **Scopo:** Creare un oggetto la cui esistenza *dipende* da un oggetto della classe esterna.
+    * **Regola Chiave:** È legata a un'istanza della classe esterna ("enclosing instance").
+    * **Accesso:** Può accedere a **tutti** i membri (statici e non-statici) dell'istanza esterna.
+    * **Limiti:** Non può avere membri `static`.
+
+3.  **Local Class (Classe Locale)**
+    * **Definizione:** Dichiarata localmente *all'interno di un blocco di codice* (es. un metodo).
+    * **Scopo:** Encapsulamento spinto a livello di funzione; utile per data-structure o task specifici di un metodo.
+    * **Regola Chiave:** In Java, è un tipo di Inner Class. Ha accesso ai membri della classe esterna e alle variabili `final` (o *effectively final*) del blocco locale.
+
+### Esempio Codice: Nested vs Inner
+
 ```smalltalk
 testScope
 | t |
@@ -30,7 +56,9 @@ Java definisce però 3 tipi di classi:
 - Classi innestate:
 - Classi interne:
 - Classi locali:
-Il più semplice, la prima definisco una classe all'interno di una classe, se volessi far vedere quella classe solo al suo interno utilizzo questo metodo. Il nome della classe è **LOCALE**
+## 1. Classi Annidate (Nested Class)
+
+- **Definizione** In Java, per essere una **Nested Class** (in senso tecnico), deve essere dichiarata usando la parola chiave `static`. 
 
 ```java
 public class X {
@@ -39,12 +67,13 @@ public class X {
 	private class Inner {
 		int y;
 		Inner() { y = instanceVar + staticVar; }
-}
-private static class Nested { // static me lo rende nested
-	int x;
-	Nested() {
-		x = staticVar;
-		// x += instanceVar; Error!
+	}
+	private static class Nested { // static me lo rende nested
+		int x;
+		Nested() {
+			x = staticVar;
+			// x += instanceVar; Error!
+		}
 	}
 }
 ```
@@ -62,9 +91,7 @@ private static class Nested { // static me lo rende nested
 
 ---
 
-
-
-
+Esempio che include tutto:
 
 ```java
 class X {
@@ -85,10 +112,9 @@ class X {
     private static class W {
         int k;   
         void f() {
-            // Questo codice non compilerebbe.
             // y++; // <-- NON SI PUÒ FARE!
             // W è 'static' e non sa a quale 'y' di quale 
-            // istanza 'X' ti riferisci.
+            // istanza 'X' si riferisce.
         }
         
         // Se W avesse bisogno di 'y', dovresti passarglielo
@@ -99,17 +125,15 @@ class X {
 
     // Metodo d'istanza di X
     void h() {
-        // Per creare Z, serve un'istanza di X (questa, 'this')
-        Z unoZ = new Z(); // Sintassi breve (dentro X)
-        // Equivalente a: Z unoZ = this.new Z();
+        // Creazione istanza
+        Z unoZ = new Z();
         
         unoZ.f(); // Modifica la 'y' di *questa* istanza di X
         
         // Per creare W, non serve un'istanza di X
-        W unW = new W(); // Sintassi breve (dentro X)
-        // Equivalente a: W unW = new X.W();
+        W unW = new W(); 
         
-        unW.g(this); // Passiamo l'istanza 'this' se serve
+        unW.g(this); // passiamo istanza
     }
 }
 ```
@@ -119,10 +143,60 @@ class X {
 Classi Locali:
 Strumenti per rafforzare incapsulamento classi, ha le stesse regole di accesso di ogni elemento presente
 
+## 2. Interfacce (`interface`)
 
+L'interfaccia è un costrutto chiave per l'astrazione in Java.
+
+- È un tipo riferimento.
+    
+- **Non può** essere istanziata.
+    
+- **Non** ha variabili d'istanza.
+    
+- Supporta l'**ereditarietà multipla** (una classe può implementare più interfacce, un'interfaccia può estenderne altre).
+    
+> [!Info]
+>Spiegato da Succi
 Interfaccia:
 Un interfaccia introduce un tipo che può essere successivamente elementi classi, costanti e metodi.
 Le interfacce non possono essere instanziate (new) ma solamente implementate o istanziate da altre interfacce
+### Contenuto di un'Interfaccia
+
+1. **Costanti:** Implicitamente `public static final`.
+    
+2. **Metodi Astratti:** Firme di metodi senza corpo (quelli tradizionali).
+    
+3. **Default Methods:** Metodi con un'implementazione di default (parola chiave `default`).
+    
+4. **Static Methods:** Metodi di utilità legati all'interfaccia (parola chiave `static`).
+    
+5. **Tipi Annidati:** Può contenere altre classi o interfacce.
+    
+
+### Default & Static Methods
+
+- **Static Methods:** Sono metodi di utilità generici. Non possono accedere a dati non-statici né essere sovrascritti.
+    
+- **Default Methods:** Sono un meccanismo potente per permettere l'**evoluzione delle interfacce**.
+    
+
+**Problema:** Se ho un'interfaccia `DoIt` e voglio aggiungere un nuovo metodo `didItWork`, tutto il codice esistente che implementa `DoIt` si rompe perché non ha quel metodo.
+
+**Soluzione:** Aggiungo il metodo come `default`, fornendo un'implementazione base. Il vecchio codice continua a compilare.
+```java
+// Esempio di evoluzione con 'default'
+public interface DoIt {
+    void doSomething(int i, double x);
+    int doSomethingElse(String s);
+
+    // Nuovo metodo aggiunto senza rompere il codice esistente
+    default boolean didItWork(int i, double x, String s) {
+        // Corpo del metodo di default
+        return true; 
+    }
+}
+```
+
 
 ```c
 public interface Bicycle {
@@ -133,6 +207,24 @@ void applyBrakes(int decrement);
 }
 ```
 
+### Gestione Conflitti (Default Methods)
+
+Cosa succede se una classe implementa più interfacce che definiscono lo stesso metodo `default`?
+
+1. **Priorità alla Classe:** I metodi d'istanza della superclasse **vincono sempre** sui metodi `default` delle interfacce.
+    
+    - _Esempio:_ `Pegasus extends Horse implements Flyer, Mythical`. Se `Horse` (classe) e `Flyer` (interfaccia) hanno entrambi `identifyMyself()`, vince l'implementazione di `Horse`.
+        
+2. **Priorità alla Sotto-interfaccia:** Se un'interfaccia estende un'altra e fa override di un metodo `default`, la versione più specifica (quella della sotto-interfaccia) vince.
+    
+    - _Esempio:_ `Dragon implements EggLayer, FireBreather`. Se `EggLayer extends Animal` e `EggLayer` sovrascrive `identifyMyself` di `Animal`, vince la versione di `EggLayer`.
+        
+3. **Ambiguità (Errore):** Se una classe implementa due interfacce _indipendenti_ (es. `OperateCar`, `FlyCar`) che definiscono lo stesso metodo `default` (`startEngine`), il compilatore genera un **errore**.
+    
+    - **Soluzione:** La classe `FlyingCar` **deve** fare l'override del metodo. Può scegliere quale implementazione `default` chiamare (o entrambe) usando la sintassi `super`:
+        
+    
+    Java
 Ha un implementazione ed ho dei vincoli della $\exists$ almeno i metodi nelle classi.
 
 ```java
@@ -161,8 +253,5 @@ public class Pegasus extends Horse implements Flyer,
 ```
 
 
-non ci sto capendo un pipo, ti giuro di sta parte
-
 Se sono allo stesso livello devo fare un overriding specifico.
-me lo sto distruggendo in una maniera che neanche puoi immaginarti
 
