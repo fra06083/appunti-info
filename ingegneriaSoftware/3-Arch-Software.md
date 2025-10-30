@@ -59,13 +59,16 @@ Attività svolta **dopo l’analisi dei requisiti** e **prima della codifica**. 
 - Basata su **eventi e listener**
     
 - Il flusso dipende da **trigger esterni**
+	
+- Gli annunciatori di eventi non sanno chi reagirà 
     
 
 > 📱 _Esempio:_ App Android  
 > Main loop attende eventi → `while(true) wait(event)`
 
 ---
-
+nelle slide ci sarebbe anche "repositories", non so perché qua non ci sia, magari il prof. l'ha saltato
+- - -
 ### ✅ Interpreti
 
 - Usata per **sistemi complessi**
@@ -77,3 +80,4 @@ Attività svolta **dopo l’analisi dei requisiti** e **prima della codifica**. 
 
 ---
 
+e poi boh, mancano tipo 40 slide. Le ha saltate? Uh

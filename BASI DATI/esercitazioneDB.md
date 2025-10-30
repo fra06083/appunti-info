@@ -176,3 +176,86 @@ $\Join_{project=number}$
 STAFF
 $\large \Join_{employee = code}$
 EMPLOYEE)
+
+- - -
+esercizio 23
+$\large \pi_{surname}$
+ $\large \sigma_{Wage>WageH}$$\large$
+(EMPLOYEE)
+$\large \Join_{Department = Id}$
+$\pi_{CodeH, WageH}$ ( $\rho_{codeH <-- code, WageH <-- Wage, }$(EMPLOYEE)
+$\Join_{CodeH= Director}$
+DEPARTMENT))
+
+qui abbiamo fatto la proiezione, ciò permette di non fare la rinominazione di tutti gli attributi di employee
+- - -
+esercizio 24
+
+$\pi_{surname}$(EMPLOYEE
+$\large \Join_{Director = Code}$
+DEPARTMENT)
+$\LARGE \cup$
+$\large \pi_{surname}$(PROJECT
+$\large \Join_{manager = code}$
+EMPLOYEE)
+- - -
+esercizio 25
+$\large \pi_{id, name}$(DEPARTMENT)
+$\LARGE -$
+$\large \pi_{id, name}$($\large \sigma_{wage <= 60k}$(DEPARTMENT
+$\Join_{Id = Department}$
+EMPLOYEE))
+In questo caso si fa anche la proiezione dell'id, per evitare problemi nel caso di dipartimenti con lo stesso nome
+- - -
+esercizio 26
+questo interessante, magari riguardalo dato che è un pochetto tricky
+$\pi_{surname}$($\large \sigma_{department = id}$(EMPLOYEE
+$\large \Join_{code = director}$
+DEPARTMENT))
+- - -
+esercizio 27
+
+$\large \pi_{code, name}$ (EMPLOYEE)
+$\LARGE -$
+$\large \pi_{code,name}$((EMPLOYEE)
+$\large \Join_{code = employee}$
+(STAFF))
+- - -
+esercizio 28
+
+$\sigma_{id = id'}$((EMPLOYEE
+$\large \Join_{Code = Employee}$
+STAFF)
+$\large \cup$ 
+(EMPLOYEE
+$\large \Join_{Code = Employee}$
+STAFF))
+
+no così pacco, la sol gasante la trovi nella foto del 24/10 
+
+(STAFF) $\large$ (STAFF) ...
+- - - 
+esercizio 29
+fai la differenza di
+($\pi_{code, surname}$
+(EMPLOYEE)
+$\Join_{code = Employee}$
+(STAFF))
+
+con la soluzione dell'es di prima
+- - -
+esercizio 30
+return the surname of the highest paid employee
+questo un po' stronzetto se non ragioni con delle tabelle in mente.
+
+prima fai un theta join, ottenendo un casino di roba, ciò che è importante è che otterrai una sorta di elenco (code1, surname1 e wage1) di tutti gli stronzi che hanno uno stipendio altissimo. A questo fai una proiezione gasante su code e surname (ovvero gli stronzi che vengono pagati meno) , e non code1 e surname1!! Sottrai questo alla tabella originale e boom, quelli pagati poco vengono sottratti alla tabella originale! Se non si capisce, fai passo passo, con una tabella di esempio e vedi che è easy :3
+
+ok gaza, capito
+
+$\large \pi_{code, surname}$(EMPLOYEE) 
+-
+$\large\pi_{code,surname}$ (EMPLOYEE 
+$\large \Join_{wage<wage1}$ 
+$\large \rho_{code1, surname1, wage1 <-- code, surname, wage}$EMPLOYEE)
+
+da rivedere questo
