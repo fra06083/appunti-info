@@ -188,7 +188,6 @@ Può essere utilizzato sia a livello classe che a livello oggetto.
 > http è un esempio di proxy; Faccio una put (chiamata REST)
 fa in modo che ci sia una sincronizzazione con il messaggio, in base che sia sincrona o asincrona, questo è il modo in cui viene approcciato il proxy; Per file lunghi uso JSON, trasformo informazioni ASCII in formato leggibile
 
-hermes aiuto
 
 Pattern comportamenti
 Funzioni e responsabilità degli oggetti, permettono di bypassare i limiti del linguaggio ad oggetti
@@ -239,6 +238,8 @@ End Class
 esempio dns, abbiamo una richiesta soddisfatta da un oggetto ma non sappiamo chi lo farà
 Incateniamo gli oggetti che risponderanno e finché nessuno lo soddisferà passa avanti
 
+>[!Example]
+>Controllo il tipo di file utilizzo l'app specifica per quell'app, se non specificato uso un app generica
 #### Mediatore
 Serve quando più oggetti complessi devono parlare tra loro
 

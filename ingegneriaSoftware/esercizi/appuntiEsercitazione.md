@@ -15,3 +15,6 @@ Tutta la documentazione disponibile viene analizzata, selezionando nomi e verbi.
 * verbi, potenziali candidati per diventare le responsabilità delle classi, suggerendo possibili associazioni
 - - -
 ![[Pasted image 20251015150707.png]]
+
+
+- - -
