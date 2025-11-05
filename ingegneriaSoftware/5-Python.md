@@ -7,12 +7,17 @@ x = "abc"
 ```
 le variabili sono immutabili posso solo ricreare nuove stringhe
 
-
-
+```python
+y = x + 'd'
+``` 
+```bash
+% "abcd" 
+```
 
 | Immutabilità                                          | Trasparenza referenziale                                                                     |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | Un valore non può essere modificato dopo la creazione | Puoi sostituire un’espressione con il suo valore senza cambiare il significato del programma |
+
 l'immutabilità fa avere trasparenza referenziale
 
 nelle liste, occhio alla differenza fra la copia: tramite l'utilizzo dell'operatore "=" e `w.copy()`
@@ -179,3 +184,22 @@ if __name__ == "__main__":
 quando viene chiamata la funzione testScope() io creo un'altra variabile y, another w e k che equivale alla z globale.
 
 poi viene chiamata testInnerScope(), viene creata una nuova variabile w = 300. Global x dice che da quel momento in poi dentro la funzione verrà utilizzata la x globale! nonlocal y (def scritta sopra di nonlocal). Modifico la x globale, la y di testScope e pongo (una nuova) z uguale a 400
+- - -
+Moduli
+La struttura è simile a C; il nome del modulo è il nome del file senza estensione ed è messo in `___name__` se è chiamato direttamente `__main__`
+
+
+```python
+import amodule
+```
+e il file deve essere caricato nell'environment `PYTHONPATH`
+>[!Warning] Se non carico il nome ma tutto amodule devo effettivamente specificarlo sempre con:
+
+```python
+from amodule import goofy
+```
+- - - 
+
+### namespace
+- - -
+Insieme di tutti i nomi associati

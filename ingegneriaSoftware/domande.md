@@ -11,259 +11,367 @@ Questo documento contiene una serie di domande di esercitazione per il corso di 
 - B. Funzionalità non essenziali ma che migliorano l'esperienza utente.
 - C. Funzionalità opzionali che possono essere implementate se c'è tempo.
 - D. Requisiti essenziali che devono essere soddisfatti per il successo del progetto.
-**Risposta Corretta:** A
+<details><summary>Vedi la risposta</summary>
+**Risposta Corretta:** A</details>
 
 ### Ps.2. Il "triangolo di ferro" del project management rappresenta i tre vincoli fondamentali di un progetto. Quali sono?
 - A. Qualità, Comunicazione, Budget.
 - B. Tempo, Costo, Scopo.
 - C. Team, Product Owner, Scrum Master.
 - D. Customer, Solution, Endeavour.
+<details><summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.3. Cos'è lo "scope" di un progetto agile?
 - A. Gli stakeholder del progetto.
 - B. Il product backlog.
 - C. Il numero finale degli sprint.
 - D. L'architettura del prodotto.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.4. Quale ruolo è assente in Scrum?
 - A. Product owner.
 - B. Scrum master.
 - C. Project manager.
 - D. Team member.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.5. Cos'è il Minimal Viable Product?
 - A. Il prodotto con il più alto ritorno sugli investimenti rispetto al rischio.
 - B. Il prodotto al termine del primo sprint
 - C. Il prodotto al termine dell'ultimo sprint
 - D. Il prodotto al termine dello sprint più recente
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Ps.6. Che cos'è la velocità di un team Scrum?
 - A. Il numero medio di story point "fatti" in uno sprint.
 - B. Il numero medio di user story "fatti" in uno sprint.
 - C. Il numero di story point "fatti" nell'ultimo sprint.
 - D. Il numero di story point "fatti" nello sprint in corso.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Ps.7. Come si calcola lo sforzo necessario allo sviluppo di un prodotto software?
 - A. Il costo in euro di un prodotto software.
 - B. La durata in giorni dello sviluppo.
 - C. La durata dello sviluppo moltiplicata per le persone coinvolte nello sviluppo.
 - D. La somma dei tempi dedicati allo sviluppo da parte di ciascun sviluppatore.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.8. Come si chiama il testing in cui si usa il sorgente del programma?
 - A. Blackbox.
 - B. Whitebox.
 - C. Debugging.
 - D. Validazione.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.9. Quale delle seguenti affermazioni descrive meglio il compito principale del project manager di un prodotto software?
 - A. Assicurarsi che ogni sviluppatore scriva il codice meno costoso possibile nel minor tempo possibile.
 - B. Gestire i requisiti parlando con gli stakeholder e analizzandoli col team di sviluppo.
 - C. Gestire il testing in modo automatico cercando di risparmiare tempo e diminuire effort.
 - D. Assicurarsi che il prodotto sia completato nei tempi previsti, rimanendo entro il budget e soddisfacendo i requisiti richiesti.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Ps.10. Quale delle seguenti caratteristiche identifica meglio un processo di sviluppo agile?
 - A. La suddivisione del lavoro in iterazioni brevi e incrementali con feedback frequenti dagli stakeholder.
 - B. L'uso delle user story per definire completamente i requisiti di prodotto prima di iniziare lo sviluppo.
 - C. La pianificazione accurata di tutte le attività necessarie al prodotto prima dell'avvio dello sviluppo.
 - D. L'individuazione di un singolo responsabile che prenda tutte le decisioni tecniche e di progetto.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Ps.11. In un design orientato agli oggetti, cos'è un "componente riusabile"?
 - A. Una parte del codice progettata per essere facilmente integrabile in contesti diversi.
 - B. Un template HTML collegato a un controller.
 - C. Una classe che eredita da se stessa.
 - D. Un modulo Python contenente solo costanti.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Ps.12. Quale tra questi è un vantaggio dei test automatici?
 - A. Aumentano il coupling tra i moduli.
 - B. Rallentano il ciclo di sviluppo.
 - C. Eliminano la necessità del debugging.
 - D. Permettono di individuare rapidamente regressioni nel codice.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Ps.13. Qual è l'obiettivo della tecnica del "Mocking" nei test?
 - A. Creare ambienti virtuali.
 - B. Misurare la copertura del codice.
 - C. Simulare comportamenti di componenti esterni.
 - D. Gestire errori in tempo reale.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.14. Cosa caratterizza un buon design modulare?
 - A. Moduli altamente accoppiati tra loro.
 - B. Codice duplicato nei vari moduli.
 - C. Assenza di interfacce.
 - D. Alta coesione e basso accoppiamento.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Ps.15. A cosa serve un diagramma delle classi UML?
 - A. A visualizzare l'output di un programma.
 - B. A rappresentare le relazioni tra classi e oggetti.
 - C. A disegnare wireframe per interfacce grafiche.
 - D. A testare il comportamento delle classi.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.16. Qual è lo scopo principale della progettazione guidata dai test (TDD)?
 - A. Produrre test in ritardo rispetto allo sviluppo.
 - B. Guidare la scrittura del codice attraverso i test.
 - C. Scrivere meno codice possibile.
 - D. Testare l'usabilità dell'interfaccia utente.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.17. Qual è lo scopo principale della fase di analisi dei requisiti?
 - A. Definire l'architettura del sistema.
 - B. Comprendere cosa il sistema deve fare.
 - C. Scrivere i test di unità.
 - D. Stimare il tempo di esecuzione del software.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.18. Quale dei seguenti modelli di sviluppo è caratterizzato da fasi sequenziali e ben definite?
 - A. Modello Incrementale.
 - B. Modello a spirale.
 - C. Modello a cascata.
 - D. Modello Agile.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.19. Perché è utile creare una documentazione dei requisiti?
 - A. Per decidere il linguaggio di programmazione.
 - B. Per generare automaticamente il codice sorgente.
 - C. Per evitare l'uso di librerie esterne.
 - D. Per avere una base condivisa tra sviluppatori e stakeholder.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Ps.20. Qual è l'obiettivo del testing nel processo di sviluppo software?
 - A. Ridurre la dimensione del codice.
 - B. Eliminare le dipendenze tra moduli.
 - C. Produrre documentazione automatica.
 - D. Verificare che il software si comporti come atteso.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Ps.21. In Scrum, cosa rappresenta il Product Backlog?
 - A. L'elenco dei bug da correggere.
 - B. L'elenco ordinato delle funzionalità e modifiche richieste al prodotto.
 - C. Il diario delle attività svolte dallo Scrum Master.
 - D. Il piano di progetto iniziale.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.22. Chi è responsabile della massimizzazione del valore del prodotto in Scrum?
 - A. Il team di sviluppo.
 - B. Il project manager.
 - C. Il Product Owner.
 - D. Il cliente.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.23. Quale delle seguenti attività avviene tipicamente alla fine di uno Sprint in Scrum?
 - A. Stima dei costi del progetto.
 - B. Ridefinizione della visione del prodotto.
 - C. Sprint Review e Sprint Retrospective.
 - D. Disegno dell'architettura del sistema.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.24. In cosa consiste la Daily Scrum?
 - A. Una revisione dettagliata del codice.
 - B. Un incontro con gli stakeholder.
 - C. Una breve riunione quotidiana per pianificare il lavoro delle prossime 24 ore.
 - D. Una presentazione dei risultati ottenuti al cliente.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.25. Quale delle seguenti non è una delle responsabilità dello Scrum Master?
 - A. Decidere quali funzionalità implementare.
 - B. Facilitare le cerimonie Scrum.
 - C. Aiutare a rimuovere gli impedimenti al lavoro del team.
 - D. Promuovere la comprensione di Scrum nel team.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Ps.26. Qual è la durata raccomandata per uno Sprint in Scrum?
 - A. 1 giorno.
 - B. 1 mese e mezzo.
 - C. Massimo 1 mese.
 - D. Almeno 3 mesi.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.27. Qual è uno dei principali vantaggi dell'uso di Scrum?
 - A. Riduzione automatica del debito tecnico.
 - B. Feedback frequente e continuo da parte degli stakeholder.
 - C. Rimozione del bisogno di documentazione.
 - D. Codice generato automaticamente ad ogni sprint.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.28. Qual è l'obiettivo della Retrospective in Scrum?
 - A. Pianificare le funzionalità dello sprint successivo.
 - B. Identificare miglioramenti nel processo di lavoro del team.
 - C. Presentare il lavoro finito agli stakeholder.
 - D. Raccogliere i bug segnalati dagli utenti.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.29. In Scrum, chi partecipa alla Sprint Planning?
 - A. Solo lo Scrum Master e il Product Owner.
 - B. Solo il team di sviluppo.
 - C. Solo il cliente.
 - D. Scrum Master, Product Owner e team di sviluppo.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Ps.30. Quale delle seguenti è una caratteristica di un buon requisito software?
 - A. Essere vago e aperto a interpretazioni.
 - B. Essere chiaro, misurabile e verificabile.
 - C. Essere scritto in linguaggio tecnico.
 - D. Essere modificabile solo dal team di sviluppo.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.31. Cosa si intende per 'prototipazione nel contesto dello sviluppo software?
 - A. Scrivere codice direttamente in produzione.
 - B. Definire il piano economico del progetto.
 - C. Costruire versioni semplificate del software per raccogliere feedback.
 - D. Creare la documentazione finale del sistema.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.32. Cosa rappresenta una 'user story' in Scrum?
 - A. Un diagramma dei flussi di dati.
 - B. Una descrizione sintetica di una funzionalità dal punto di vista dell'utente.
 - C. Un requisito funzionale formale.
 - D. Un caso di test per l'integrazione.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.33. Quale delle seguenti attività rientra nella gestione della qualità del software?
 - A. Assegnare i task al team di sviluppo.
 - B. Stimare i costi delle licenze software.
 - C. Definire metriche per valutare il codice.
 - D. Scrivere la documentazione utente.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.34. Qual è un vantaggio dell'uso della modellazione UML nel processo di sviluppo?
 - A. Elimina la necessità del testing.
 - B. Facilita la comunicazione tra membri del team e stakeholder.
 - C. Riduce i tempi di compilazione.
 - D. Permette di testare automaticamente il codice.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Ps.35. La relazione include per un use case
 - A. definisce un'estensione atomica del mio use case.
 - B. definisce un use case che è una specializzazione atomica dello use case di partenza.
 - C. definisce una funzionalità coesa dello use case e quindi separata.
 - D. definisce una relazione di ereditarietà tra use case.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Ps.36. La relazione extend per un use case
 - A. definisce un'estensione atomica del mio use case.
 - B. definisce un use case che è una specializzazione atomica dello use case di partenza.
 - C. crea con lo use case di partenza un nuovo use case.
 - D. definisce una relazione di ereditarietà tra use case,
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Ps.37. Un use case è
 - A. un qualunque requisito.
 - B. un caso di uso dell'interfaccia utente accettato dall'utente.
 - C. un caso di uso atomico che dà valore all'utente.
 - D. un requisito semplice del sistema validato dall'utente.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ---
 
@@ -274,308 +382,440 @@ Questo documento contiene una serie di domande di esercitazione per il corso di 
 - B. permette la decorazione del codice con commenti necessari alla autodocumentazione.
 - C. è una funzione di ordine superiore.
 - D. definisce l'interfaccia con il $C_{++}$.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.2. I template in $C++$
 - A. sono una modalità corretta e completa di definire generici.
 - B. simulano la presenza di generici tramite la definizione di puntatori a void.
 - C. definiscono classi astratte che permettono di definire comportamenti analoghi ai generici.
 - D. producono una moltiplicazione di codice oggetto se istanziati su tipi multipli.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Pd.3. Qual è lo scopo principale di un caso d'uso in un processo di sviluppo software?
 - A. Descrivere come il sistema è implementato internamente.
 - B. Fornire una rappresentazione grafica della struttura dei dati.
 - C. Rappresentare le interazioni tra gli attori e il sistema per soddisfare un obiettivo specifico.
 - D. Valutare la performance del sistema in ambiente di produzione.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.4. Quale affermazione descrive meglio la specializzazione dei template in $C++?$
 - A. I template sono modelli di codice precompilati da usare in fase di inclusione di header.
 - B. I template in $C++$ funzionano esattamente come i generici in Java, con type erasure a runtime.
 - C. I template emulano il polimorfismo parametrico generando classi o funzioni specifiche durante la compilazione, sulla base di modelli esistenti.
 - D. I template usano la specializzazione per creare gerarchie di classi simili all'ereditarietà in fase di esecuzione.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.5. Una funzione virtuale in UML
 - A. può limitare il numero di repliche di campi in una classe base.
 - B. permette l'overriding.
 - C. permette l'overloading.
 - D. è una forma di eredità che sembra esistere ma poi si dissolve.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.6. Con quale strumento in C si può approssimare il polimorfismo parametrico?
 - A. Con le macro.
 - B. Con l'inclusione.
 - C. Con i puntatori a funzione.
 - D. Non è mai possibile.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.7. L'ereditarietà virtuale
 - A. è la tipica forma di ereditarietà che implementa il late binding.
 - B. è una forma di ereditarietà che non permette di istanziare oggetti della classe.
 - C. è una forma di ereditarietà che serve ad evitare la moltiplicazione di istanze della classe.
 - D. non esiste.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.8. Un oggetto è
 - A. un modello di una classe.
 - B. un'istanza di una classe.
 - C. una classe.
 - D. una metaclasse.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.9. UML è l'acronimo per
 - A. Universal Modeling Language.
 - B. Unified Modeling Language.
 - C. Universal Modeling Level.
 - D. Unified Modeling Level.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.10. Qual è la principale differenza tra requisiti funzionali e requisiti non funzionali nel contesto dello sviluppo software?
 - A. I requisiti funzionali descrivono come il software deve essere implementato, mentre i requisiti non funzionali descrivono cosa il software deve fare.
 - B. I requisiti funzionali sono sempre obbligatori, mentre i requisiti non funzionali sono opzionali.
 - C. I requisiti funzionali definiscono i comportamenti e le operazioni del sistema, mentre i requisiti non funzionali specificano vincoli o caratteristiche di qualità del sistema.
 - D. I requisiti funzionali riguardano solo l'interfaccia utente, mentre i requisiti non funzionali riguardano solo il backend del sistema.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.11. Il late binding permette
 - A. la definizione di modelli generici.
 - B. la definizioni di più funzioni con nomi identici ma parametri diversi risolta durante la compilazione.
 - C. la definizioni di più funzioni con nomi identici ma parametri diversi risolta durante l'esecuzione.
 - D. l'associazione del corpo di una funzione al suo nome durante l'esecuzione.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Pd.12. L'overloading in Python
 - A. dà un errore di compilazione.
 - B. è strutturato come in C++.
 - C. richiede una fase di preprocessamento.
 - D. è gestito tramite un decorator.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Pd.13. Qual è uno dei principi base di Python secondo il Zen of Python?
 - A. La velocità è tutto.
 - B. Complicato è meglio di complesso.
 - C. Esplicito è meglio che implicito.
 - D. Più codice, meglio è.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.14. Quale tra questi NON è un paradigma supportato da Python?
 - A. Scripting.
 - B. Logico.
 - C. Imperativo.
 - D. Funzionale.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.15. Cosa succede se dimentichi l'indentazione dopo un'istruzione if in Python?
 - A. Viene ignorata l'istruzione.
 - B. Si esegue comunque.
 - C. Si genera un SyntaxWarning.
 - D. Si genera un IndentationError.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Pd.16. Come viene gestito il typing in Python?
 - A. Statico e forte.
 - B. Dinamico e debole.
 - C. Statico e debole.
 - D. Dinamico e forte.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Pd.17. Qual è il risultato dell'operazione $9//4$ in Python?
 - A. 2
 - B. 2.25
 - C. 3
 - D. Errore.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.18. Quale tra queste affermazioni è corretta riguardo le stringhe in Python?
 - A. Le stringhe sono mutevoli.
 - B. Si può modificare un singolo carattere.
 - C. Le stringhe sono immutabili.
 - D. Le stringhe supportano operatori di assegnamento.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.19. Cosa succede se si tenta di accedere all'indice 20 di una stringa lunga 20 caratteri?
 - A. Restituisce il carattere finale.
 - B. Solleva un IndexError.
 - C. Restituisce None.
 - D. Solleva un ValueError.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.20. Quale tra questi tipi di collezioni è immutabile in Python?
 - A. Tuple.
 - B. Set.
 - C. Dictionary.
 - D. List.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.21. Quale funzione viene usata per generare una sequenza di numeri interi in Python?
 - A. list()
 - B. seq()
 - C. range()
 - D. series()
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.22. Qual è la differenza tra pop() e remove() in una lista?
 - A. $pop()$ rimuove per valore, remove() per indice.
 - B. $pop()$ rimuove per indice, remove() per valore.
 - C. Entrambe rimuovono per indice.
 - D. Nessuna differenza.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.23. Cosa ritorna range(2, 10, 3) una volta convertito in lista?
 - A. [2, 4, 6, 8, 10]
 - B. [2, 5, 8]
 - C. [2, 3, 4, 5, 6, 7, 8, 9]
 - D. [2, 5, 7, 9]
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.24. Cosa rappresenta l'eccezione StopIteration in un iteratore?
 - A. L'iteratore ha raggiunto la fine della sequenza.
 - B. L'iteratore ha trovato un errore nei dati.
 - C. L'iterazione non è mai iniziata.
 - D. L'oggetto non è iterabile.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.25. Come si chiama una funzione senza nome in Python?
 - A. anon()
 - B. ghost
 - C. lambda
 - D. inline
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.26. Cosa fa il decoratore @staticmethod?
 - A. Rende un metodo accessibile solo dalla classe.
 - B. Consente di chiamare il metodo senza passare self o cls.
 - C. Rende il metodo protetto.
 - D. Aggiunge il metodo al costruttore.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.27. Qual è l'ordine delle regole di scoping in Python (LEGB)?
 - A. Local, External, Global, Builtin
 - B. Local, Enclosing, Global, Builtin
 - C. Last, Enclosing, Global, Builtin
 - D. Last, External, Global, Builtin
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.28. A cosa serve la parola chiave global in Python?
 - A. A creare una variabile visibile solo localmente.
 - B. A limitare l'uso di variabili globali in funzioni.
 - C. A riferirsi a una variabile definita fuori dal blocco corrente.
 - D. A esportare variabili in altri moduli.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.29. Cosa succede ai parametri con valori predefiniti mutabili in Python?
 - A. Vengono copiati ogni volta.
 - B. Mantengono il loro stato tra chiamate successive.
 - C. Generano un errore se modificati.
 - D. Vengono convertiti in valori immutabili.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.30. Cosa rappresenta type(x) quando x è una funzione?
 - A. method
 - B. builtin_function_or_method
 - C. function
 - D. lambda
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.31. Dopo aver consumato un generatore in Python, cosa succede?
 - A. Può essere riutilizzato infinite volte.
 - B. Viene automaticamente rigenerato.
 - C. Viene convertito in lista.
 - D. È esaurito e non può più essere usato.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Pd.32. Quale metodo magico permette di sovraccaricare l'operatore '+'?
 - A. __sum__
 - B. __plus__
 - C. __add__
 - D. __concat__
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.33. Qual è il vantaggio dell'uso di una metaclasse Singleton generalizzata?
 - A. Permette di creare oggetti da qualsiasi classe base.
 - B. Garantisce che esista solo un'istanza di qualsiasi classe che la usa.
 - C. Migliora la velocità di esecuzione.
 - D. Impedisce la modifica degli attributi.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.34. Cosa rappresenta il concetto di "interfaccia" in ambito di programmazione orientata agli oggetti?
 - A. Una libreria esterna che estende le funzionalità.
 - B. Un contratto che specifica un insieme di metodi che una classe deve implementare.
 - C. Una classe concreta astratta.
 - D. Una classe che eredita da più superclassi.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.35. Qual è lo scopo principale della separazione tra interfaccia e implementazione?
 - A. Rendere più difficile la manutenzione del codice.
 - B. Migliorare le performance in compilazione.
 - C. Ridurre l'accoppiamento tra le componenti.
 - D. Garantire la compatibilità con il sistema operativo.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.36. Quando si usa il principio di Dependency Inversion?
 - A. Per implementare ricorsione.
 - B. Per ereditare proprietà da una superclasse.
 - C. Quando si devono ottimizzare cicli annidati.
 - D. Quando si vogliono dipendenze da astrazioni e non da classi concrete.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Pd.37. Perché è utile utilizzare il principio di Single Responsibility?
 - A. Ogni classe ha una sola ragione di cambiamento.
 - B. Aumenta la velocità di compilazione.
 - C. Riduce la quantità di codice scritto.
 - D. Evita l'uso delle classi astratte.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.38. Qual è il risultato dell'operazione $7//3$ in Python?
 - (a) 2.3333
 - (b) 3
 - (c) 1
 - (d) 2
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** D
+</details>
 
 ### Pd.39. Cosa succede se si prova ad assegnare un nuovo carattere a un indice di una stringa in Python?
 - A. La stringa viene modificata correttamente.
 - B. Viene sollevato un TypeError.
 - C. La stringa viene copiata e modificata.
 - D. Non succede nulla.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.40. Quale operatore in Python serve a concatenare due stringhe?
 - A. *
 - B. +
 - C. &
 - D. //
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.41. Come si scrive una stringa multilinea in Python?
 - A. Usando il carattere \n.
 - B. Usando triple virgolette """..."""
 - C. Usando la funzione multistring().
 - D. Con la concatenazione di più stringhe singole.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.42. Cosa produce la slice $[::-1]$ applicata a una stringa?
 - A. Ritorna la stessa stringa.
 - B. Ritorna una copia della stringa.
 - C. Ritorna la stringa invertita.
 - D. Ritorna la stringa con solo caratteri pari.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.43. Quale errore viene sollevato quando si accede a un indice fuori dal range di una stringa?
 - A. TypeError
 - B. ValueError
 - C. IndexError
 - D. KeyError
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.44. Che differenza c'è tra gli operatori + e * usati con le stringhe?
 - A. + ripete la stringa, * concatena.
 - B. + concatena le stringhe, * ripete la stringa un certo numero di volte.
 - C. Entrambi concatenano.
 - D. Entrambi ripetono la stringa.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.45. Cosa succede con questo codice?
 `c = 'Hello' 'World'`
@@ -584,259 +824,370 @@ Questo documento contiene una serie di domande di esercitazione per il corso di 
 - B. Stampa "Hello World" senza spazio.
 - C. Stampa "Hello World" con spazio.
 - D. Nessuna stampa.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.46. Come funziona la slice [start:end: step]?
 - A. Restituisce una sottostringa da start a end escluso, saltando step caratteri.
 - B. Restituisce la stringa invertita.
 - C. Restituisce una copia della stringa.
 - D. Restituisce una lista di caratteri.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.47. Qual è la differenza principale tra una stringa e una lista in Python?
 - A. Le stringhe sono mutabili, le liste sono immutabili.
 - B. Le stringhe sono immutabili, le liste sono mutabili.
 - C. Nessuna differenza.
 - D. Le liste contengono solo numeri, le stringhe solo caratteri.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.48. Quale tra le seguenti affermazioni è vera riguardo le liste in Python?
 - A. Le liste sono immutabili e ordinate.
 - B. Le liste sono mutabili e ordinate.
 - C. Le liste non supportano duplicati.
 - D. Le liste sono immutabili e non ordinate.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.49. Cosa succede assegnando una lista ad un'altra variabile in Python?
 - A. Viene creata una copia profonda della lista.
 - B. Viene creata una copia superficiale della lista.
 - C. Entrambe le variabili puntano alla stessa lista.
 - D. Viene generato un errore.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.50. Quale metodo permette di aggiungere un elemento alla fine di una lista?
 - A. add()
 - B. insert()
 - C. append()
 - D. extend()
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.51. Cosa succede se si modifica un elemento interno (ad esempio una lista) contenuto in una tupla?
 - A. La tupla diventa mutabile.
 - B. La modifica genera un errore.
 - C. L'elemento interno si modifica ma la tupla resta immutabile.
 - D. La tupla si copia automaticamente prima della modifica.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.52. Quale tra le seguenti affermazioni sui set è corretta?
 - A. I set sono ordinati e possono contenere duplicati.
 - B. I set sono non ordinati e non possono contenere duplicati.
 - C. I set possono contenere liste come elementi.
 - D. I set supportano l'operatore + per concatenazione.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.53. Cosa succede se si prova ad aggiungere una lista come elemento di un set?
 - A. La lista viene aggiunta correttamente.
 - B. Il set diventa mutabile.
 - C. Si genera un errore di tipo "unhashable type".
 - D. La lista viene convertita in tupla e aggiunta.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.54. Come si crea una copia profonda (deep copy) di una lista annidata in Python?
 - A. Usando il metodo copy() della lista.
 - B. Usando l'operatore di assegnazione =.
 - C. Usando il modulo copy con copy.deepcopy().
 - D. Non è possibile creare copie profonde di liste annidate.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.55. Qual è il risultato di questa operazione su una lista `aList = [1,2,3,4]` `aList.pop(2)`?
 - A. Rimuove e ritorna l'elemento con valore 2.
 - B. Rimuove e ritorna l'elemento all'indice 2.
 - C. Rimuove l'elemento 2 senza ritornarlo.
 - D. Genera un errore.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.56. Quale tra le seguenti affermazioni descrive correttamente la differenza tra tuple e liste?
 - A. Tuple sono mutabili, liste sono immutabili.
 - B. Tuple sono immutabili, liste sono mutabili.
 - C. Entrambe sono mutabili ma con sintassi diversa.
 - D. Entrambe sono immutabili ma con sintassi diversa.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.57. Cosa succede se si concatena una tupla con un intero in Python?
 - A. L'intero viene aggiunto come elemento.
 - B. Viene generato un errore di tipo.
 - C. L'intero viene convertito in tupla automaticamente.
 - D. La tupla diventa mutabile.
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.58. Nel contesto delle API di OpenAI, quale ruolo serve a definire le regole e il comportamento del modello?
 - A. user
 - B. assistant
 - C. system
 - D. developer
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.59. Quale informazione è contenuta nel campo usage della risposta API di OpenAI?
 - A. Lo stile della risposta
 - B. Il numero di token utilizzati
 - C. Il livello di temperatura
 - D. Il modello usato
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.60. A cosa serve un PromptTemplate in LangChain?
 - A. Gestire la memoria conversazionale
 - B. Definire una catena di agenti
 - C. Creare prompt strutturati e parametrizzati
 - D. Collegare database esterni
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.61. Qual è la funzione principale della Memory in LangChain?
 - A. Salvare lo stato del modello
 - B. Ricordare il contesto delle conversazioni precedenti
 - C. Generare automaticamente prompt
 - D. Aumentare la velocità di calcolo
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.62. In CrewAI, quale elemento rappresenta una singola unità di lavoro assegnata a un agente?
 - A. Crew
 - B. Role
 - C. Task
 - D. Goal
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.63. Qual è la differenza principale tra LangChain e CrewAI?
 - A. LangChain si concentra su pipeline e strumenti, CrewAI sulla coordinazione multi-agente
 - B. LangChain è solo per traduzioni, CrewAI per generazione di testo
 - C. LangChain è un modello di linguaggio, CrewAI è un framework
 - D. LangChain funziona senza API, CrewAI solo con API OpenAI
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.64. Cosa rappresenta il campo finish_reason in una risposta API di OpenAI?
 - A. Il modello è andato in errore
 - B. Il motivo per cui il modello ha terminato la generazione
 - C. La quantità di token generati
 - D. La temperatura usata nella generazione
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.65. Per quale motivo può essere utile lo streaming delle risposte di un LLM?
 - A. Per ridurre il costo dei token
 - B. Per migliorare la sicurezza dei prompt
 - C. Per ridurre la latenza e visualizzare il testo man mano che viene generato
 - D. Per salvare automaticamente le risposte nel database
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.66. In LangChain, cosa fa una LLMChain?
 - A. Collega un prompt a un modello e gestisce input e output
 - B. Genera automaticamente nuove API
 - C. Ottimizza l'uso dei token
 - D. Traduce i messaggi in diverse lingue
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.67. Qual è il vantaggio principale di usare Agents in LangChain?
 - A. Consentono di ridurre i costi computazionali
 - B. Eliminano la necessità di definire prompt
 - C. Consentono al modello di scegliere dinamicamente quali strumenti utilizzare
 - D. Rendono l'LLM più veloce
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.68. Qual è lo scopo dei Tools in LangChain?
 - A. Esporre funzioni esterne che il modello può invocare
 - B. Memorizzare conversazioni precedenti
 - C. Fornire dataset per il training
 - D. Modificare la temperatura del modello
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.69. In CrewAI, cosa definisce il parametro goal di un agente?
 - A. Le API a cui l'agente può accedere
 - B. L'obiettivo esplicito che guida le decisioni dell'agente
 - C. Il tipo di memoria utilizzata
 - D. La sequenza dei task da eseguire
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.70. In Crew AI, come possono essere eseguiti i task?
 - A. In modo sequenziale o in parallelo
 - B. Solo in ordine gerarchico
 - C. Solo uno alla volta
 - D. Sempre in background
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.71. Cosa rappresenta un Crew in CrewAI?
 - A. Un singolo agente specializzato
 - B. Una memoria condivisa tra più task
 - C. Un insieme di agenti e task coordinati
 - D. Un tool esterno integrato nel sistema
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ### Pd.72. Quali sono le tre fasi principali dell'esecuzione di un programma Python?
 - A. Parsing, Ottimizzazione, Linking
 - B. Interpreter Initialization, Compilazione in bytecode, Bytecode Interpretation
 - C. Preprocessing, Compilazione in Assembly, Esecuzione
 - D. Traduzione in C, Compilazione, Runtime
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.73. Qual è il compito principale della fase di Interpreter Initialization?
 - A. Generare i file .pyc
 - B. Caricare moduli built-in, gestire memoria e creare il GIL
 - C. Disassemblare il bytecode
 - D. Avviare la compilazione JIT
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.74. Cosa rappresenta un frame durante l'esecuzione del bytecode?
 - A. Una struttura che contiene solo variabili globali
 - B. Un'unità di esecuzione con codice, scope e stack
 - C. Una copia del sorgente .py
 - D. Un dizionario temporaneo con i built-in
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.75. Come funziona la call stack in Python?
 - A. Ogni funzione aggiunge un frame; al ritorno il frame viene rimosso
 - B. Tutte le funzioni condividono un unico frame
 - C. La call stack non esiste, si usano solo dizionari di contesto
 - D. Le funzioni ricorsive sovrascrivono i frame precedenti
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.76. Qual è la funzione del modulo dis in Python?
 - A. Disassemblare il bytecode in opcodes leggibili
 - B. Ottimizzare la compilazione
 - C. Mostrare i moduli built-in
 - D. Gestire i riferimenti degli oggetti
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.77. Quale meccanismo di gestione memoria usa CPython?
 - A. Garbage collection generazionale puro
 - B. Reference counting con garbage collector per cicli
 - C. Manuale come in C
 - D. Unicamente mark-and-sweep
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.78. Perché esiste il Global Interpreter Lock (GIL)?
 - A. Per velocizzare il calcolo parallelo
 - B. Per semplificare la gestione memoria, evitando race condition
 - C. Per supportare librerie C esterne
 - D. Per ridurre la latenza del bytecode
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.79. Come fanno librerie come NumPy a ottenere parallelismo nonostante il GIL?
 - A. Usano Python puro senza bytecode
 - B. Rilasciano temporaneamente il GIL in codice C esterno
 - C. Compilano direttamente in Assembly
 - D. Ignorano completamente la call stack
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** B
+</details>
 
 ### Pd.80. Qual è la caratteristica principale della Python Virtual Machine?
 - A. È un interprete stack-based che esegue bytecode
 - B. È un compilatore che genera file eseguibili nativi
 - C. È una macchina a registri per CPU multi-core
 - D. Funziona solo come ottimizzatore di memoria
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** A
+</details>
 
 ### Pd.81. Qual è lo scopo del value stack nella VM?
 - A. Conservare moduli built-in
 - B. Salvare costanti globali
 - C. Tenere operandi e risultati temporanei durante l'esecuzione
 - D. Gestire i thread del GIL
+<details>
+<summary>Vedi la risposta</summary>
 **Risposta Corretta:** C
+</details>
 
 ---
 

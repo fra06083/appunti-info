@@ -126,7 +126,7 @@ L'implementazione SQL deve nascondere le parti del database che non sono accessi
 Si potrebbero usare delle viste per mostrare solo alcune tuple ad un utente.
 
 In SQL-3 sono stati implementati i role based access control **RBAC**, dove ogni ruolo è una sorta di container con svariati privilegi che possono essere assegnati tramite il comando grant
-Esempio di RBAC:
+Esempio di **RBAC**:
 ```SQL
 -- create a new role
 create role Employee;
@@ -139,4 +139,46 @@ grant Employee to user;
 
 -- revoke the previously granted privilege
 revoke create table from Employee;
+```
+sviluppiamo i permessi usando i ruoli:
+- così non dobbiamo assegnare ad ogni persona un set di permessi. (sarebbe scomodo, se mi dimenticassi di rimuovere i permessi ad un utente?) Con i ruoli basta rimuoverlo dal ruolo ed abbiamo fatto.
+> [!Warning] Occhio alla differenza tra gruppi e ruoli, sono due cose diverse
+> **I Gruppi sono usati per dare permessi agli utenti, un ruolo invece serve per dare i permessi ad una determinata tabella... etc** 
+
+ 
+### Transazioni
+- - -
+Una **transazione** è un programma in esecuzione che forma un'unità logica del database in processo (si parla di operazioni atomiche!)
+
+#### Proprietà ACID
+* **A**tomicity 
+* **C**onsistency preservation
+* **I**solation 
+* **D**urability (permanency)
+
+###### Atomicity
+* ..
+###### Consistent
+* il database passa da uno stato ad un altro, ma rimane sempre in uno stato **consistente**!
+
+###### Isolation
+* ogni utente/programma che esegue la transazione lo esegue in isolamento, come se non avesse interruzioni o interferenze da parti di altri "attori"
+
+###### Durability
+* Quando una transazione termina (detta anche committed al termine) io ho un effetto di durabilità, della transazione
+
+La transazione potrebbe terminare in due modi:
+* commit [work], quindi le operazioni sono salvate nel database
+* rollback [work], le operazioni vengono scartate e il database torna allo stato precedente
+Di norma la maggior parte dei database relazionali hanno la funzione di auto-commit dove ogni statement è una diversa transazione
+
+```SQL
+start transaction
+  update BANKACCOUNT
+    set Balance = Balance - 10
+    where AccountNumber = 42177;
+  update BANKACCOUNT
+    set Balance = Balance + 10
+    where AccountNumber = 12202;
+commit work;
 ```

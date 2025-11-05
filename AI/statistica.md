@@ -56,7 +56,7 @@ Stima dei parametri
 siano $\large X_i \text{ e } Y$ variabili aleatorie discrete
 $\large \pi$ credo sia la priorità a priori (sis, lo è)
 $\large \theta$ è il subset, nell'immagine sotto, si prende una possibile istanza di outlook, temp, humidity e wind 
-![[image-4.png|423x247]] (slide pagina 98)
+![[prototypePatternEsempio.png|423x247]] (slide pagina 98)
 
 i valori ottenuti alla fine (.0053 e .0205 per capirci, slide 99) non sono delle probabilità. Per trasformarli in probabilità vanno divisi singolarmente per la loro somma. (i guess)
 - - -

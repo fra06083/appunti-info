@@ -26,8 +26,8 @@ record implementation Stack
 end 
 ```
 è molto  
-#### **Tre tipi principali:**
-
+#### **Tre tipi principali di pattern:**
+**Gamma approach**
 - **Creazionali**: pattern che gestiscono la creazione di oggetti.
     
 - **Strutturali**: pattern che gestiscono la composizione di classi e oggetti.
@@ -64,13 +64,14 @@ Si parla di costruzione tramite aggregazione o eredità quindi
 
 Come garantire una sola istanza **(Singleton)**?
 
-- Rendere il costruttore dell'oggetto privatuo.
+- Rendere il costruttore dell'oggetto privato.
     
-- Impedire l'uso del `new` esterno all'interno della classe.
+- Impedire l'uso del `new` esterno, all'interno della classe.
     
 - Fornire un metodo statico per ottenere l'istanza unica.
     
 
+questo qua sotto probably sbagliato (?) in java sarebbe giusto. In c++ si fa con l'overloading sulla new
 ```cpp
 class Budget {
 private:
@@ -94,8 +95,9 @@ Utilizzo un approccio simile ad un sistema operativo, come una directory. Stile 
 > FIND  - exec grep % | se esce qualcosa print
 
 Fai un operazione in Composite, mi fa un forall g in children ed esegue g.Operation() come algoritmo di visita; IL FORALL può essere deterministico o indeterministico, dipende se il linguaggio ha side effects
+Si crea una sorta di struttura ad albero!
 
----
+- - -
 
 Come itero sugli account?
 Operazione che lavora su un oggetto o classe concrea e fornisce elementi: First(), Next(), IsDone() e CurrentItem()
@@ -114,44 +116,56 @@ Un pattern ha 4 elementi
 	and trade-offs of applying design patterns
 ---
 
-Builder Pattern:
+**Builder Pattern:**
 Questo pattern è utilizzato per creare un oggetto complesso mentre separa i suoi processi dalla sua rappresentazione
-
+[qua spiegato bene](https://www.geeksforgeeks.org/system-design/builder-design-pattern/)
 
 ---
-Abstract Factory:
-Se volessi creare un'interfaccia per un mio sistema, devo fare in modo che corrispondino a quella interfaccia dati, grazie al fattore astratto. Ho tante famiglie di componenti e devo gestirlo.
+**Abstract Factory:**
+Se volessi creare un'interfaccia per un mio sistema, devo fare in modo che corrispondano a quella interfaccia dati, grazie al fattore astratto. Ho tante famiglie di componenti e devo gestirlo.
 
+**problema**: creare famiglie coerenti di oggetti che dipendono da una scelta iniziale.
+creare l'interfaccia grafica del mio sistema, non voglio tenere traccia delle scelte che ho fatto in precedenza, la scelta iniziale deve avere effetto su quelle successive.
+prendi come esempio la **dark mode** del telefono (per esempio, sapendo che lo sfondo è nero il testo scelto sicuramente non sarà nero)
 
 >Componente 1 può essere l'etichetta
  Componente 2 il bottone
  Componente 3 ....
 
 Userò l'implementazione
-```c
+```c++
+ abstractFactory f;
+ AbstractComponent1 c1; 
+ AbstractComponent2 c2;
  
 f = new FamilyAFactory(); // incapsulo un comportamento, fisso cl
-cl = f.createComponent1();
+c1 = f.createComponent1();
+
+// oppure
+
+f = new FamilyCFactor();
+c2 = f.createComponent2();
 ```
 
 implementazione nei dispositivi moduli, noi chiamiamo un operazione get___ e molto spesso facciamo operazioni Singleton
 
 ---
 
-3 Modello: Prototipo
+**3 Modello: Prototipo**
 
 Il prototipo mi crea un oggetto copiando un altro già esistente.
-A runtime posso non sapere la struttura che devo utilizzare, ma posso averne un altro che posso simulare.
-
+A runtime posso non sapere la struttura che devo utilizzare, ma posso averne un altro che posso simulare (utilizzare).
 > [!Example]
 > [Applicazioni mobili]
 > Es. Semplificare implementazione, creo un modo per creare un oggetto (un app) in maniera semplificata per creare applicazioni mobili usando XML, costruire il programma a **RUNTIME**, una finestra ad esempio la creerò copiando un oggetto finestra già definita e modificarla
 
-Nei linguaggi di programmazione abbiamo la reflection, che ci dice il tipo di oggetto.
+Nei linguaggi di programmazione abbiamo la reflection, che ci dice il tipo di oggetto a runtime.
+
+I prototipi sono veri e propri oggetti, copie di una determinata classe. Immagina l'esempio ![[prototypePatternEsempio.png|504x200]]
 
 ---
 
-Pattern strutturali
+**Pattern strutturali**
 Usano soprattutto eredità, ne vedremo solo alcuni.
 Si dividono in:
 - Pattern di classi
@@ -161,38 +175,40 @@ Si dividono in:
 separare l'interfaccia di una classe dalla sua implementazione.
 
 The goal of the adapter is to resolve “naming”
-mismatches
+mismatches [spiegato su wikipedia](https://it.wikipedia.org/wiki/Adapter_pattern)
 
 The goal of the bridge is to hide the
 implementation from the “interface”
 
 
 ### Decorator Pattern:
-Il decorator è formato sul concetto che un oggetto possa essere arricchito a piacere senza modificarne la struttura è un'alternativa migliore a fare sottoclassi di continuo.
+Il decorator è formato sul concetto che un oggetto possa essere arricchito a piacere senza modificarne la struttura; è un'alternativa migliore a fare sottoclassi di continuo.
 
 posso aggiungere più decoratori al mio oggetto per "specializzarlo" e essere arricchito
 
-```c
+```c++
 Window w;
 w = new ElementaryWindow();
 w = new TitledWindow(w, "Title")
 w = new BorderedWindow()w;
 ```
----
+![[decoratorPatternEsempio.png|221x297]]
+- - -
 
-Proxy Pattern:
+**Proxy Pattern:**
 simile al bridge ma permette l'accesso virtuale, può essere usato per accesso remoto e per protezione.
-Può essere utilizzato sia a livello classe che a livello oggetto.
+Può essere utilizzato sia a **livello classe** che a **livello oggetto**.
+* *Nella sua forma più generale, un proxy è una classe che funziona come interfaccia per qualcos'altro
 
 > [!Example]
 > http è un esempio di proxy; Faccio una put (chiamata REST)
 fa in modo che ci sia una sincronizzazione con il messaggio, in base che sia sincrona o asincrona, questo è il modo in cui viene approcciato il proxy; Per file lunghi uso JSON, trasformo informazioni ASCII in formato leggibile
 
 
-Pattern comportamenti
+**Pattern comportamenti**
 Funzioni e responsabilità degli oggetti, permettono di bypassare i limiti del linguaggio ad oggetti
 
-Visitor Pattern
+**Visitor Pattern**
 Serve per aggiungere informazioni ad un oggetto senza cambiarne la struttura
 
 Le operazioni posso essere in base alla tipologia di **visitor**.
@@ -200,7 +216,7 @@ Prendiamo ad esempio FIND -exe ... tipo: (&& cat $1) , quello che viene dopo que
 MI FA VISITARE TUTTE LE CLASSI
 
 ---
-Strategy pattern
+**Strategy pattern**
 Struttura simile, però mi dà proprio strategie in base al componente.
 Supponiamo che io abbia:
 
@@ -224,7 +240,7 @@ Class PuliziaSchermoStrategy implements IStrategiaPulizia
         Print "Pulisco lo schermo con il panno in microfibra."
     End method
 End Class
-
+f
 // Strategia C
 Class PuliziaCattedraStrategy implements IStrategiaPulizia
     method pulisci()
@@ -235,9 +251,9 @@ End Class
 ---
 
 #### Chain of Responsibility
-esempio dns, abbiamo una richiesta soddisfatta da un oggetto ma non sappiamo chi lo farà
+Abbiamo una richiesta che deve essere soddisfatta da un oggetto fra tanti ma non sappiamo quali di questi lo farà
 Incateniamo gli oggetti che risponderanno e finché nessuno lo soddisferà passa avanti
-
+*prendi come esempio il funzionamento del dns*
 >[!Example]
 >Controllo il tipo di file utilizzo l'app specifica per quell'app, se non specificato uso un app generica
 #### Mediatore
