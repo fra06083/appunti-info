@@ -1,5 +1,8 @@
 - - -
 #### Concetto di Referential Transparency:
+
+il valore del riferimento è trasparente, ovvero che il valore non dipende dall'ordine di esecuzione delle operazioni
+
 Le variabili non cambiano valore
 risultato delle operazioni non cambia se scambio le operazioni.
 ```python
@@ -56,8 +59,15 @@ aTuple
 (’touple’, 2, 9, [10, 2, 3], ’start’)
 ```
 
-la copy per le tuple non esiste, dato che è presente l'operatore di "=" che fa una copia, elemento per elemento in memoria ! Per copiare tutti gli elementi interni, si può utilizzare la `deepcopy`, **(che non ho ben capito uhhhhhhhhhhh, differenza in memoria tra uguale e deepcopy aiuto).**
+la copy per le tuple non esiste, dato che è presente l'operatore di "=" che fa una copia, elemento per elemento in memoria ! Per copiare tutti gli elementi interni, si può utilizzare la `deepcopy`.
 
+![[esempioShallowDeepCopy.png|0x0]]
+
+
+- Spiegazione SUCCI: Quando ho una struttura dati (array puntatori) mi copia fisicamente l'array.
+opzione 1: q=p prende lo stesso indirizzo
+opzione 2: q->50 q->70 hanno gli stessi dati ma sono copiati in altre parti
+opzione 3 (deepcopy): mi copio le strutture dati come liste, in una allocazione di memoria
 ##### Sets 
 - - -
 collezione di dati disordinati e immutabili, **senza duplicati** 

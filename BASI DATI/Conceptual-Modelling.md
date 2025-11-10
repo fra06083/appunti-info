@@ -71,11 +71,21 @@ in base alla cardinalità, esistono vari tipi di relazioni
 è formato da:
 * gli attributi dell'entità (?) **identificatori interni**
 * attributi più le entità esterne, raggiungibili tramite relazioni **identificatori esterni**![[esempioIdentificatoriEsterni.png]]
-secondo me qua servono solo gran foto fai anche di quello grande poi pusha sera o domani o boh 
+honest non ho compreso bene gli identificatori esterni
 
 
+##### Generalizzazione
+collega una o più entità con un'altra entità avente tot entità come specifici casi
+$\large E$  è una **generalizzazione** di $\large E_1, E_2, ..., E_n$ 
+$\large E_1, E_2, ..., E_n$ sono una **specializzazione** di $\large E$
 
+* proprietà:
+	* 
 
-
+**Tipi di generalizzazione**
+- Totale .. 
+- disgiunta ..
+	- disgiunzione parziale
+	- disgiunzione totale
 
 
