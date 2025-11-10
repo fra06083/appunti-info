@@ -66,7 +66,7 @@ la copy per le tuple non esiste, dato che è presente l'operatore di "=" che fa 
 
 - Spiegazione SUCCI: Quando ho una struttura dati (array puntatori) mi copia fisicamente l'array.
 opzione 1: q=p prende lo stesso indirizzo
-opzione 2: q->50 q->70 hanno gli stessi dati ma sono copiati in altre parti
+opzione 2 copy (a destra): q->50 q->70 hanno gli stessi dati ma sono copiati in altre parti
 opzione 3 (deepcopy): mi copio le strutture dati come liste, in una allocazione di memoria
 ##### Sets 
 - - -
@@ -139,7 +139,7 @@ python example.py
 #### Regole di scope
 - - -
 Scoping rules (3/5)
-# scoping.py
+#### scoping.py
 ```python
 x = 5
 def testScope(a):
@@ -195,7 +195,7 @@ quando viene chiamata la funzione testScope() io creo un'altra variabile y, anot
 
 poi viene chiamata testInnerScope(), viene creata una nuova variabile w = 300. Global x dice che da quel momento in poi dentro la funzione verrà utilizzata la x globale! nonlocal y (def scritta sopra di nonlocal). Modifico la x globale, la y di testScope e pongo (una nuova) z uguale a 400
 - - -
-Moduli
+### Moduli
 La struttura è simile a C; il nome del modulo è il nome del file senza estensione ed è messo in `___name__` se è chiamato direttamente `__main__`
 
 
@@ -213,3 +213,172 @@ from amodule import goofy
 ### namespace
 - - -
 Insieme di tutti i nomi associati
+zio pera...
+
+
+### Packages
+- - -
+roba ...
+
+
+*fine parte python come linguaggio imperativo*
+
+
+# Python come linguaggio funzionale
+- - - 
+Lambda expression e immutabile.
+
+### OVERLOADING
+- - - 
+In java c'è overriding ma non overloading
+In python non è presente il full overloading delle funzioni. Nel caso di definizioni multiple con lo stesso nome di una funzione, solo l'ultima definizione verrà utilizzata
+>[!Info] L'overloading serve per funzioni che possono avere tipi diversi di variabili e avere un tipo diverso in base alla variabile passata. Es. passo 2 int mi fa la somma, passo 2 stringhe me li concatena...
+
+nota: è possibile passare funzioni come parametri.
+controlla *map, filter, reduce*
+
+
+##### Lazy evaluation
+- - -
+*yield* permette di restituire on demand un singolo iteratore (?)
+da w3chool: *The `yield` keyword is used to return a list of values from a function.*
+
+
+
+zio pera le liste, ci puoi fare un casino di cose, controlla bene pagina 101
+![[listComprehension.png]]
+
+
+con zip io ritorno un iteratore di tuple, riguarda pagina 102
+![[beyondListComprehension.png|663x355]]
+
+
+# Python come linguaggio ad oggetti
+- - -
+da certi punti di vista python è anche un linguaggio ad oggetti! Le classi sono definiti con `class`. Per riferirsi al oggetto in sé si usa `self`, l'inizializzatore, simile al costruttore è definito tramite `__init__`, le variabili di istanziazione sono spesso definite dentro il costruttore.
+
+Le variabili di classe sono definite globalmente dentro la classe, i metodi delle classi sono definiti con `@classmethod decoration` una referenziazione alla classe `cls` e con la solita indentazione 
+
+
+### Ereditarietà
+- - -
+* python supporta ereditarietà singola e multipla.
+* ogni classe senza una super classe è implicitamente derivata dalla classe `object`
+* Un oggetto `object` è di tipo TIPO (`type`)
+* quando un nuovo oggetto viene creato il metodo di inizializzazione `__init__` viene chiamato
+```python
+class Dog(Animal):
+	def __init__(self, name):
+		super().__init__(name)
+	def identifyYourself(self):
+		print("Hello! I am a dog and my name is " + self.name)
+
+```
+
+
+parlando di `__init__` :3 questo è un inizializzatore. 
+Se mancasse `__init__`, viene chiamato `__init__` dalla prima classe padre.
+
+esempio
+Animal è un oggetto a cui applico il metodo `()`, questo metodo mi ritorna un oggetto istanza.
+```python
+class Parrot(Animal): 
+	def __init__(self): 
+		super().__init__() 
+		print("Creating a parrot") 
+class Dove(Animal):
+	pass 
+if __name__ == "__main__": 
+	a = Animal() 
+	pe = Penguin() 
+	pa = Parrot() 
+	d = Dove()
+	
+'''
+output:
+Creating an animal 
+Creating a penguin 
+Creating an animal 
+Creating a parrot 
+Creating an animal
+'''
+```
+
+### Operator overloading
+- - -
+Tipo speciale di funzioni!
+![[overloadingOperatoriEsempio1.png|550x334]]
+(altro esempio a pagina 113)
+#### Tutti gli operatori presenti:
+- `getitem (self,index)` for subscripting in the rhs,
+that is the x = anObject[index]
+- `setitem (self,index)` for subscripting in the lhs,
+that is the anObject[index] = x
+contains (self,index) for the in operator
+- `repr (self)` to convert an object in a string, used in
+print with the template pattern
+- `iter (self)` to generate an iterable, like
+iter(anObject) to use then, say, in a for
+- `enter (self)` and `exit (self,...)` to handle
+entering and exiting blocks
+
+`__call__` permette di chiamare oggetti funzionali, per gestire determinate strutture, idk quali. 
+
+
+---
+Un oggetto in python ha un'identità un valore o uno stato definito dagli attributi, un tipo o una base (simile ad una superclasse)
+```python
+>>> type(3)
+<class ’int’>
+>>> type(animal)
+<class ’__main__.Animal’>
+>>> type(dog)
+<class ’__main__.Dog’>
+>>> type(int)
+<class ’type’>
+>>> type(Animal)
+<class ’type’>
+>>> type(Dog)
+<class ’type’>
+>>> type(object)
+<class ’type’>
+>>> type(type)
+<class ’type’>
+```
+
+`dir()` da l'elenco dei metodi che posso richiamare su una determinata classe passata come parametro
+
+
+### Metaclassi
+una metaclasse è una classe le cui istanza sono delle classi
+zio pera è come se fossero dei generatori di classi
+
+
+Creo al volo un oggetto:
+```python
+>>> Cat = type("Cat",(Animal,),{"nickname":"Prr", "weight":10}) // creazione oggetto
+>>> c = Cat("Garfield")
+>>> print(c)
+<__main__.Cat object at 0x11148fa90>
+>>> print(c.nickname)
+Prr
+>>> print(c.weight)
+10
+>>> print(c.name)
+Garfield
+```
+
+**processo di creazione:**
+
+
+
+
+```python
+dog = Dog()
+```
+`__call__` --> `__new__` -> `__init__`
+
+new alloca spazio prima di istanziare l'oggetto
+
+
+per creare oggetti della classe `Dog` 
