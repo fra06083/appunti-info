@@ -75,6 +75,7 @@ honest non ho compreso bene gli identificatori esterni
 
 
 ##### Generalizzazione
+- - -
 collega una o più entità con un'altra entità avente tot entità come specifici casi
 $\large E$  è una **generalizzazione** di $\large E_1, E_2, ..., E_n$ 
 $\large E_1, E_2, ..., E_n$ sono una **specializzazione** di $\large E$
@@ -89,3 +90,7 @@ $\large E_1, E_2, ..., E_n$ sono una **specializzazione** di $\large E$
 	- disgiunzione totale
 
 
+
+### UML 2
+- - -
+basically la roba fatta con ~~succi~~ ciucci

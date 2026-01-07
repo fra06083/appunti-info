@@ -190,7 +190,7 @@ posso aggiungere più decoratori al mio oggetto per "specializzarlo" e essere ar
 Window w;
 w = new ElementaryWindow();
 w = new TitledWindow(w, "Title")
-w = new BorderedWindow()w;
+w = new BorderedWindow(w);
 ```
 ![[decoratorPatternEsempio.png|221x297]]
 - - -

@@ -20,7 +20,7 @@ Altri paradigmi oltre a quello ad oggetti sono:
 Late binding, permette più flessibilità. L'associazione tra codice e corpo della funzione, avviene durante l'esecuzione
 ---
 ## Funzioni virtuali
-è un metodo non statico di una classe che può essere ridefinito in classi derivate
+è un **metodo non statico** di una classe che può essere **ridefinito** in classi derivate
 quando si invoca una funzione virtuale per un oggetto, la quale il tipo è conosciuto a tempo di compilazione
 
 ### Overriding

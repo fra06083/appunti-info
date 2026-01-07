@@ -70,7 +70,7 @@ FROM <TableList>
 ```sql
 SELECT * FROM R
 ```
-Se usassi * non utilizzo proiezione, prendo tutte le tabelle tramite selection (sigma) $\sigma$ 
+Se usassi * non utilizzo proiezione, prendo tutte le tabelle tramite selection (sigma) $\LARGE \sigma$ 
 
 ##### Predicato LIKE:
 - LIKE si utilizza per date un pattern
@@ -83,7 +83,7 @@ SELECT * FROM PEOPLE
 
 
 
-#### esempii algebra relazionale e SQL
+#### esempi algebra relazionale e SQL
 - - -
 ```SQL
 SELECT Name, Income
@@ -93,10 +93,15 @@ WHERE Age < 30
 $\Large \pi_{name,income}(\sigma_{age<30}(PEOPLE))$
 ![[condivisione gas/BASI DATI/images/image-3.png|382x277]]
 
+$\LARGE \pi_{\text{Father}} (FATHERHOOD \Join_{\text{Child=Name}} \sigma_{\text{Income>20}} (PEOPLE))$ 
+>[!WARNING]
+>Usiamo distinct perché in algebra relazionale un risultato uguale non sarebbe valido $\LARGE U_1 \neq U_2 \neq \cdots U_{n-1} \neq U_n$
+
+
 **esempio di select con shortcut**
 ![[image-2.png|382x277]]
 
-![[image-1.png|418x286]]
+![[condivisione gas/BASI DATI/images/image-1.png|418x286]]
 
 Se facciamo il select, ci appare due volte Rossi Rome, per quel motivo dovremmo utilizzare **DISTINCT**
 La select di default mantiene i **predicati(?)** {mantiene le righe delle tabelle uguali}.
@@ -255,3 +260,13 @@ Prima e dopo:
 ![[esempioUpdate.png|211x300]]
 ###### FINE PACCO SLIDE DI SQL'S BASICS
 
+
+SCHEMA da usare per esercizi:
+```sql
+SELECT attributes_1 and expressions
+FROM tables with joins
+[WHERE condition]
+[GROUP BY attributes2]
+[HAVING aggregate condition]
+[ORDER BY attribute]
+```

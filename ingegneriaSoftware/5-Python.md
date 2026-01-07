@@ -1,7 +1,7 @@
 - - -
 #### Concetto di Referential Transparency:
 
-il valore del riferimento è trasparente, ovvero che il valore non dipende dall'ordine di esecuzione delle operazioni
+il valore del riferimento è trasparente, ovvero che il valore non dipende dall'ordine di esecuzione delle operazioni (Puoi sostituire un’espressione con il suo valore senza cambiare il significato del programma)
 
 Le variabili non cambiano valore
 risultato delle operazioni non cambia se scambio le operazioni.
@@ -21,7 +21,7 @@ y = x + 'd'
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | Un valore non può essere modificato dopo la creazione | Puoi sostituire un’espressione con il suo valore senza cambiare il significato del programma |
 
-l'immutabilità fa avere trasparenza referenziale
+### l'immutabilità fa avere trasparenza referenziale
 
 nelle liste, occhio alla differenza fra la copia: tramite l'utilizzo dell'operatore "=" e `w.copy()`
 
@@ -57,6 +57,13 @@ Collezione di dati **immutabili** ed **ordinati**, con una sintassi simile a que
 aTuple=("touple", 2, 9, [10, 2, 3], "start")
 aTuple 
 (’touple’, 2, 9, [10, 2, 3], ’start’)
+
+tupla = (4, 3, 2) # da notare che la tupla si identifica dalla virgola non dalla tonda
+tuplaInvalida = (4) # non va, diventa int
+tuplaValida = (4, )
+
+> tupla
+% (4, 3, 2)
 ```
 
 la copy per le tuple non esiste, dato che è presente l'operatore di "=" che fa una copia, elemento per elemento in memoria ! Per copiare tutti gli elementi interni, si può utilizzare la `deepcopy`.
@@ -68,10 +75,22 @@ la copy per le tuple non esiste, dato che è presente l'operatore di "=" che fa 
 opzione 1: q=p prende lo stesso indirizzo
 opzione 2 copy (a destra): q->50 q->70 hanno gli stessi dati ma sono copiati in altre parti
 opzione 3 (deepcopy): mi copio le strutture dati come liste, in una allocazione di memoria
+![[esempioDiQualcosaAllaLavagna.png|378x504]]
+questa img non ricordo di cosa sia scusa mi sono scordaro
 ##### Sets 
 - - -
 collezione di dati disordinati e immutabili, **senza duplicati** 
 le operazioni gasanti sono l'unione `|` e l'intersezione `&`. 
+```python
+thisset = {"apple", "banana", "cherry", True, 1, 2} # 1 e True sono considerati uguali
+> thisset
+secondset = {"c"}
+thirdset = thisset | secondset
+> thirdset
+% {"apple", "banana", "cherry", True, 1, 2, "c"}
+third
+>
+```
 
 ##### Dictionaries
 - - -
@@ -212,13 +231,17 @@ from amodule import goofy
 
 ### namespace
 - - -
-Insieme di tutti i nomi associati
-zio pera...
-
+Insieme di tutti i nomi associati visibili in un determinato periodo in un determinato posto
+Il namespace corrente è accessibile con l'istruzione `dir()`
+E' anche possibile vedere il namespace di un determinato modulo: `dir(amodule)`
 
 ### Packages
 - - -
-roba ...
+Un package è un insieme di moduli. Dentro la lista specificata sys.path
+con un `___init__.py` file che può essere anche vuoto.
+
+QUINDI
+> Quando un pacchetto viene caricato viene eseguito l'init.
 
 
 *fine parte python come linguaggio imperativo*
@@ -228,6 +251,7 @@ roba ...
 - - - 
 Lambda expression e immutabile.
 
+Da w3schools: A lambda function can take any number of arguments, but can only have one expression.
 ### OVERLOADING
 - - - 
 In java c'è overriding ma non overloading
@@ -237,19 +261,21 @@ In python non è presente il full overloading delle funzioni. Nel caso di defini
 nota: è possibile passare funzioni come parametri.
 controlla *map, filter, reduce*
 
-
+|             | Spiegazione: <br>                                                                                                                                                                                                    |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Overloading | è una tecnica di programmazione che consente di definire più funzioni o metodi con lo stesso nome, ma con tipo e/o numero di parametri diversi NON PRESENTE IN JAVA                                                  |
+| Overriding  | significa **sovrascrivere** o **ridefinire** un metodo ereditato da una superclasse in una sottoclasse, mantenendo lo stesso nome, gli stessi parametri e lo stesso tipo di ritorno per modificarne il comportamento |
 ##### Lazy evaluation
 - - -
-*yield* permette di restituire on demand un singolo iteratore (?)
-da w3chool: *The `yield` keyword is used to return a list of values from a function.*
+*yield* permette di restituire on demand un singolo iteratore
+>[!info]
+>da w3chools: *The `yield` keyword is used to return a list of values from a function.*
 
-
-
-zio pera le liste, ci puoi fare un casino di cose, controlla bene pagina 101
+Cosa si può fare con le liste:
 ![[listComprehension.png]]
 
 
-con zip io ritorno un iteratore di tuple, riguarda pagina 102
+con zip io ritorno un iteratore di tuple
 ![[beyondListComprehension.png|663x355]]
 
 
@@ -287,12 +313,16 @@ class Parrot(Animal):
 		super().__init__() 
 		print("Creating a parrot") 
 class Dove(Animal):
-	pass 
+	pass
+class Penguin(Animal):
+	def __init__(self):
+		print("Creating a penguin")
+ 
 if __name__ == "__main__": 
-	a = Animal() 
-	pe = Penguin() 
-	pa = Parrot() 
-	d = Dove()
+	a = Animal() # Creating an animal
+	pe = Penguin() # Creating a Penguin
+	pa = Parrot() # Chiama prima la superclasse poi parrot 
+	d = Dove() # ha il pass non ha init -> superclasse
 	
 '''
 output:
@@ -310,17 +340,11 @@ Tipo speciale di funzioni!
 ![[overloadingOperatoriEsempio1.png|550x334]]
 (altro esempio a pagina 113)
 #### Tutti gli operatori presenti:
-- `getitem (self,index)` for subscripting in the rhs,
-that is the x = anObject[index]
-- `setitem (self,index)` for subscripting in the lhs,
-that is the anObject[index] = x
-contains (self,index) for the in operator
-- `repr (self)` to convert an object in a string, used in
-print with the template pattern
-- `iter (self)` to generate an iterable, like
-iter(anObject) to use then, say, in a for
-- `enter (self)` and `exit (self,...)` to handle
-entering and exiting blocks
+- `getitem (self,index)` for subscripting in the rhs, that is the x = anObject[index]
+- `setitem (self,index)` for subscripting in the lhs, that is the anObject[index] = x contains (self,index) for the in operator
+- `repr (self)` to convert an object in a string, used in print with the template pattern
+- `iter (self)` to generate an iterable, like iter(anObject) to use then, say, in a for
+- `enter (self)` and `exit (self,...)` to handle entering and exiting blocks
 
 `__call__` permette di chiamare oggetti funzionali, per gestire determinate strutture, idk quali. 
 
@@ -369,16 +393,114 @@ Garfield
 ```
 
 **processo di creazione:**
-
-
-
-
 ```python
 dog = Dog()
 ```
 `__call__` --> `__new__` -> `__init__`
 
 new alloca spazio prima di istanziare l'oggetto
-
-
 per creare oggetti della classe `Dog` 
+
+encore sulle metaclassi:
+nella metaclasse inserisco informazioni che aiutano a costruire il tipo e non all'istanza del tipo. 
+
+cls è il metodo che passiamo, per poter accedere ai metodi di classe. È il "puntatore" alla classe che permette di accedere alla variabile di classe `_instances` (questo di pagina 152)
+
+- - -
+qua tutta la roba che manca sui type hints
+
+
+- - -
+
+### Reflection and Introspection
+- - -
+* introspezione: ovvero l'abilità di poter scoprire informazioni su un oggetto a runtime
+* riflessione: estende l'introspezione, permettendo la modifica degli oggetti a runtime
+
+
+
+### Decoratori
+- - -
+I decoratori sono delle funzioni di ordine superiore, che permettono di alterare dinamicamente il comportamento delle funzioni o delle classi.
+
+tre tipi principali di decoratori:
+* di funzione
+* di metodo
+* di classe
+```python
+def decorator_name(func): # ’func’ represents the function being decorated
+	def wrapper(*args, **kwargs):
+		# Code before
+		result = func(*args, **kwargs)
+		# Code after
+	return result
+return wrapper
+@decorator_name
+def function_to_decorate():
+pass
+```
+###### Decoratori di classe
+- - - 
+- 
+un metodo statico è un metodo che viene messo all'interno per ragioni di visibilità (questione di coesione)
+
+un metodo di classe mi permette di accedere agli attributi ma non a quelli di istanza
+
+
+class method non può accedere agli attributi di istanza
+
+> owner serve a specificare la classe di cui fa parte, viene istanziato automaticamente a class. Fa riferimento a cls (cls: parametro che passiamo ai metodi di classi per poter accedere ai parametri di classe.)
+
+
+```python
+def add_class_name(cls):          # cls is the class being decorated
+	cls.class_name = cls.__name__ # Add a new attribute ’class_name’
+	return cls                    # Return the modified class
+
+@add_class_name                   # Apply the decorator to the Person class
+class Person:
+	pass
+print(Person.class_name) # Access the added class attribute
+
+# Output:
+# Person
+```
+che stronzo però sincero cioé 45 minuti come cazzo fai dio *****ti********* non farmi agitare sennò scuoio e finisco al tg
+
+
+
+
+@property sembra trasformare il metodo in una variabile
+
+è possibile applicare più decoratori tramite:
+* decorator chaining -> passo un decorator ad un altro decorator
+
+Fine tortura esame PAGINA 193. ne- 1+9+3 fa 13.... numerologia fa fortuna. 
+
+
+```python
+'''prof quando vado ad utilizzare 2 decorators su una funzione
+ma entrambi i decorator vanno a fare qualcosa sia prima che dopo la chiamata della funzione, in che ordine vengono eseguite le cose?'''
+dec1:
+     print('1')
+     func()
+      print('2')
+
+dec2:
+     print('3')
+     func()
+      print('4')
+
+@dec2
+@dec1
+func()
+
+'''
+l'output da quanto mi pare di aver capito è 
+3
+1
+func()
+2
+4
+'''
+```

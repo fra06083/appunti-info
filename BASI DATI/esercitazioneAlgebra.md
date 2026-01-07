@@ -1,5 +1,14 @@
-hhttps://docs.google.com/presentation/d/1OuxnSOqHkj6Uq6xCSGzfK0mAlCn3xGZUVThRiFzQkrQ/edit?slide=id.p9#slide=id.p9
+https://docs.google.com/presentation/d/1OuxnSOqHkj6Uq6xCSGzfK0mAlCn3xGZUVThRiFzQkrQ/edit?slide=id.p9#slide=id.p9
 ![[image-9.png]] 
+
+- - -
+es 1:
+$\LARGE\pi_{NomeRegione}$ ($\LARGE ρ_{NomeRegione←Name}$​(REGION)
+$\LARGE\Join_{\text{NomeRegione=Region}}$ 
+(BELONGING $\LARGE\Join_{City=Code}$ $\LARGE{\sigma_{Population>1000000}}$(CITY))
+- - -
+
+
 es 3 questo boh selfie
 	start           end
 da boston ad atlanta
@@ -9,7 +18,9 @@ da atlanta  a   chicago
 $\large \Join$  
 - - -
 esercizio 4
-natural join associa gli attributi con lo stesso nome motivo per cui ho bisogno di fare il rename da name a course 
+natural join associa gli attributi con lo stesso nome motivo per cui ho bisogno di fare il rename da name a course.
+
+RENAMING da id a person poi select (lo capisci da **S**igma) di Price>Age+10
 $\sigma_{Price> Age * 10}$ ($\large \rho_{Person<-- Id}$ (PERSON)
 $\Join$
 (ENROLLMENT)
