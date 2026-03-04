@@ -1,0 +1,272 @@
+https://docs.google.com/presentation/d/1OuxnSOqHkj6Uq6xCSGzfK0mAlCn3xGZUVThRiFzQkrQ/edit?slide=id.p9#slide=id.p9
+![[image-9.png]] 
+
+- - -
+es 1:
+$\LARGE\pi_{NomeRegione}$ ($\LARGE ρ_{NomeRegione←Name}$​(REGION)
+$\LARGE\Join_{\text{NomeRegione=Region}}$ 
+(BELONGING $\LARGE\Join_{City=Code}$ $\LARGE{\sigma_{Population>1000000}}$(CITY))
+- - -
+
+
+es 3 questo boh selfie
+	start           end
+da boston ad atlanta
+
+da atlanta  a   chicago
+
+$\large \Join$  
+- - -
+esercizio 4
+natural join associa gli attributi con lo stesso nome motivo per cui ho bisogno di fare il rename da name a course.
+
+RENAMING da id a person poi select (lo capisci da **S**igma) di Price>Age+10
+$\sigma_{Price> Age * 10}$ ($\large \rho_{Person<-- Id}$ (PERSON)
+$\Join$
+(ENROLLMENT)
+$\Join$ 
+$\large \rho_{Course <-- Name}$ (COURSE))
+- - -
+esercizio 5
+$\large \pi_{name, sruname, id}$($\large \rho_{student<--id}$(STUDENT)
+$\large \Join$
+$\large \sigma_{mark = 30}$(EXAM))
+- - -
+esercizio 6
+$\large \pi_{name, surname, id}$(STUDENT) - $\large \pi_{name, sruname, id}$($\large \rho_{student<--id}$(STUDENT)
+$\large \Join$
+$\large \sigma_{mark = 30}$(EXAM))
+
+- - -
+esercizio 7
+$\large \pi_{name}$((SUPPLIER)
+$\Join_{Id=SupId}$
+$\sigma_ProdId \neq \text{PX274}$(SUPPLYING))
+- - -
+esercizio 8
+$\large \rho_{<--SupId, ProdId, Quantity}$(SUPPLYING)
+$\large \Join$
+(SUPPLYING)
+- - -
+esercizio 9
+$\large \pi_{\text{UserId}}$($\large \sigma_{author = Fleming}$(BOOK)
+$\large \Join$ 
+(BORROWING))
+- - -
+esercizio 10
+fai la differenza fra le due tabelle (vedila come una sottrazione fra insiemi)
+$\large \pi_{\text{UserId}}$($\large \sigma_{author = Fleming}$(BOOK)
+$\large \Join$ 
+(BORROWING))
+$\LARGE -$
+$\large \pi_{\text{UserId}}$($\large \sigma_{author \neq Fleming}$(BOOK)
+$\large \Join$ 
+(BORROWING))
+- - -
+esercizio 11
+$\large\pi_{name, building}$($\large \sigma_{subject = "database"}$(EXAM)
+$\Join_{code = exam}$
+$\large \sigma_{date=today}$(BOOKING))
+$\Join_{room=code}$
+(ROOM)
+- - -
+Esercizio 12
+R3 := $\large \rho_{date<--date1}$ R2 - $\large \pi_{student,date1}$($\large \sigma_{date<date1}$(R1 := $\large \pi_{student,date}$ ($\large \sigma_{mark = 30}$(EXAM))
+$\Join$ 
+R2 := $\large \rho_{date1 = date}$(R1))
+
+
+$\large \pi_{name,surname,date}(STUDENT \Join_{id=student}R3)$ 
+
+tutto da rivedere questo aiut
+- - -
+esercizio 13
+
+foto sul telefono aiuto
+
+- - -
+esercizio 14
+
+$\large \pi_{wineshop}$((CATALOG)
+$\Join_{wine = code}$
+$\large \sigma_{color = rose \lor color = red}$(WINE))
+- - -
+esercizio 15
+
+$\large \pi_{name}$((WINESHOP)
+$\Join$
+$\Large \sigma_{color = red \land color = rose}$(WINE))
+
+sbagliato zio pera, non puoi fare $\Large \sigma_{color = red \land color = rose}$ 
+![[Pasted image 20251015102153.png]]
+non puoi fare l'and, perché il colore o è rosso o rosé
+- - -
+esercizio 16
+
+$\large \pi_{name}$($\large \sigma_{gender = female}$(PERSON)
+$\Join$
+$\large \sigma_{pizza = mushroom}$(EATS))
+$\LARGE \cap$
+$\large \pi_{name}$($\large \sigma_{gender = female}$(PERSON)
+$\Join$
+$\large \sigma_{pizza = pepperoni}$(EATS))
+qua prima tocca fare prima la proiezione, perché se la facessi dopo l'intersezione ci potrebbero essere dei problemi con le chiavi, data la presenza di righe duplicate (?)
+- - -
+esercizio 17
+la differenza serve per prendere la parte con SOLO i maschi o SOLO le femmine
+$\large \pi_{pizzeria}$($\Large \sigma_{gender = F}$(PERSON) $\Join$ (FREQUENTS))
+-
+$\large \pi_{pizzeria}$($\Large \sigma_{gender = M}$(PERSON) $\Join$ (FREQUENTS))
+$\large \cup$
+$\large \pi_{pizzeria}$($\Large \sigma_{gender = M}$(PERSON) $\Join$ (FREQUENTS))
+-
+$\large \pi_{pizzeria}$($\Large \sigma_{gender = F}$(PERSON) $\Join$ (FREQUENTS))
+- - -
+esercizio 18 
+mia sol
+$\large \pi_{code,name}$( (MAGAZINE)
+$\large \Join$
+(ARTICLE) - $\large \sigma_{topic = motorcycling}$(ARTICLE)) {fare sta differenza equivale a fare la selection sul topic diverso da motorcycling}
+
+scazzato, almeno un articolo che non sia sul motorcycling
+
+la sol la trovi sul telefono gasante:
+
+- - -
+esercizio 19
+
+$\pi_{id,name}$(SAILOR
+$\Join{id=sailor}$
+
+$\large \pi_{sailor}$((BOOKING)
+$\large \Join_{id =boat}$
+$\large \sigma_{color = red}$(BOAT)
+$\LARGE\cap$
+$\large \pi_{sailor}$((BOOKING)
+$\large \Join_{id =boat}$
+$\large \sigma_{color = green}$(BOAT)))
+
+sul telefono, foto di una sol alternativa
+- - -
+esercizio 20
+
+S := $\large \pi_{Eid, Pid}$($\large \sigma_{range = 5000}$(PLANE)    $\large \Join_{id=pid}$ (CERTIFICATE))
+
+$\LARGE \pi_{id,name}$(EMPLOYEE $\Join_{Id=Eid}$  $\large \rho_{p1, E1 <-- pid, eid}$ (S)
+$\large \Join_{p1 \neq p2 \land E1 = E2}$
+$\large \rho_{p2, E2 <-- pid, eid}$ (S)))
+
+on at least two aircraft, ovvero si intende, maggiore di uno
+uh, noccapito il join di employee aiut
+- - -
+esercizio 21
+SHOW(Code, Title, Company, Duration
+Playbill(Date, Time, Show, Theatre)
+
+nomi compagnie che hanno performance il 15/10/2003 ma non 16/10/2003
+soluzione francesco:
+(SHOW) e (Playbill),
+
+soluzione
+join su Show e Code,
+$\large \pi_{company}$((SHOW
+$\large \Join_{code = show}$ 
+$\large \sigma_{date = 15/10/2003}$(PLAYBILL))
+$\LARGE -$
+$\large \pi_{company}$((SHOW
+$\large \Join_{code = show}$ 
+$\large \sigma_{date = 16/10/2003}$(PLAYBILL))
+- in ordine esce join su show e playbill, Code (codice show) e show sono connessi: poi faccio un select da quello che mi esce in cui la data è 15/10 poi faccio la proiezione per selezionarmi solo le compagnie.
+- visto che mi chiede le date non 16/10 rimuovo le righe in cui compare 16/10 da quel risultato
+- - - 
+esercizio 22
+
+
+$\large \pi_{name, surname}$($\large \sigma_{budget>100 000}$(PROJECT
+$\Join_{project=number}$
+STAFF
+$\large \Join_{employee = code}$
+EMPLOYEE)
+
+- - -
+esercizio 23
+$\large \pi_{surname}$
+ $\large \sigma_{Wage>WageH}$$\large$
+(EMPLOYEE)
+$\large \Join_{Department = Id}$
+$\pi_{CodeH, WageH}$ ( $\rho_{codeH <-- code, WageH <-- Wage, }$(EMPLOYEE)
+$\Join_{CodeH= Director}$
+DEPARTMENT))
+
+qui abbiamo fatto la proiezione, ciò permette di non fare la rinominazione di tutti gli attributi di employee
+- - -
+esercizio 24
+
+$\pi_{surname}$(EMPLOYEE
+$\large \Join_{Director = Code}$
+DEPARTMENT)
+$\LARGE \cup$
+$\large \pi_{surname}$(PROJECT
+$\large \Join_{manager = code}$
+EMPLOYEE)
+- - -
+esercizio 25
+$\large \pi_{id, name}$(DEPARTMENT)
+$\LARGE -$
+$\large \pi_{id, name}$($\large \sigma_{wage <= 60k}$(DEPARTMENT
+$\Join_{Id = Department}$
+EMPLOYEE))
+In questo caso si fa anche la proiezione dell'id, per evitare problemi nel caso di dipartimenti con lo stesso nome
+- - -
+esercizio 26
+questo interessante, magari riguardalo dato che è un pochetto tricky
+$\pi_{surname}$($\large \sigma_{department = id}$(EMPLOYEE
+$\large \Join_{code = director}$
+DEPARTMENT))
+- - -
+esercizio 27
+
+$\large \pi_{code, name}$ (EMPLOYEE)
+$\LARGE -$
+$\large \pi_{code,name}$((EMPLOYEE)
+$\large \Join_{code = employee}$
+(STAFF))
+- - -
+esercizio 28
+
+$\sigma_{id = id'}$((EMPLOYEE
+$\large \Join_{Code = Employee}$
+STAFF)
+$\large \cup$ 
+(EMPLOYEE
+$\large \Join_{Code = Employee}$
+STAFF))
+
+no così pacco, la sol gasante la trovi nella foto del 24/10 
+
+(STAFF) $\large$ (STAFF) ...
+- - - 
+esercizio 29
+fai la differenza di
+($\pi_{code, surname}$
+(EMPLOYEE)
+$\Join_{code = Employee}$
+(STAFF))
+
+con la soluzione dell'es di prima
+- - -
+esercizio 30
+return the surname of the highest paid employee
+questo un po' stronzetto se non ragioni con delle tabelle in mente.
+
+prima fai un theta join, ottenendo un casino di roba, ciò che è importante è che otterrai una sorta di elenco (code1, surname1 e wage1) di tutti gli stronzi che hanno uno stipendio altissimo. A questo fai una proiezione gasante su code e surname (ovvero gli stronzi che vengono pagati meno) , e non code1 e surname1!! Sottrai questo alla tabella originale e boom, quelli pagati poco vengono sottratti alla tabella originale! Se non si capisce, fai passo passo, con una tabella di esempio e vedi che è easy :3
+
+ok gaza, capito
+
+$\large \pi_{code, surname}$(EMPLOYEE) 
+-
+$\large\pi_{code,surname}$ (EMPLOYEE 
+$\large \Join_{wage<wage1}$ 
+$\large \rho_{code1, surname1, wage1 <-- code, surname, wage}$EMPLOYEE)
+
+da rivedere questo
